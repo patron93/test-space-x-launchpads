@@ -2,9 +2,10 @@ import { LaunchpadRequestParams } from '../typings';
 
 export function buildLaunchpadsQuery(params: LaunchpadRequestParams) {
     const query = params.search ? {
-        $text: {
-            $search: params.search ?? null
-        }
+        $or: [
+            { name: { $regex: params.search, $options: 'i' } },
+            { region: { $regex: params.search, $options: 'i' } }
+        ]
     } : {};
 
     return {

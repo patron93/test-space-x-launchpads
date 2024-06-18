@@ -8,4 +8,14 @@
         <mat-icon fontIcon="location_on"></mat-icon>
         {{ launchpad.locality }}, {{ launchpad.region }}
     </div>
+
+    <div>
+        @if (launchpad.wikipedia) {
+            <a mat-button color="primary" [href]="launchpad.wikipedia" target="_blank" class="c-launchpad-list-header__link">
+                Wiki
+
+                <mat-icon>open_in_new</mat-icon>
+            </a>
+        }
+    </div>
 </div>

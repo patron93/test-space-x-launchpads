@@ -6,6 +6,7 @@ export interface LaunchpadDto {
     launches: LaunchpadLaunchDto[];
     details: string;
     id: string;
+    wikipedia?: string;
 }
 
 export interface LaunchpadLaunchDto {
