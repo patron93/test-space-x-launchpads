@@ -1,0 +1,13 @@
+<div class="c-avatar" [ngStyle]="{'width.px': size, 'height.px': size}">
+    @if (imageUrl) {
+        <img
+            class="c-avatar__image"
+            [ngSrc]="imageUrl"
+            [alt]="altText"
+            [width]="size"
+            [height]="size"
+        >
+    } @else {
+        {{ altText?.at(0) | uppercase }}
+    }
+</div>

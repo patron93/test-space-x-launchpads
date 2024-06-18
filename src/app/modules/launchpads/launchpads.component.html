@@ -1,0 +1,26 @@
+<div class="c-launchpads">
+    <div class="c-launchpads__controls">
+        <app-search></app-search>
+        <app-pagination [length]="launchpadsCount" [pageIndex]="pageIndex"></app-pagination>
+    </div>
+
+    @if (launchpads?.length) {
+        <mat-accordion class="c-launchpads__list">
+            @for (item of launchpads; track item.id) {
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="c-launchpads__list-header">
+                        <app-launchpad-list-header [launchpad]="item"></app-launchpad-list-header>
+                    </mat-expansion-panel-header>
+
+                    <ng-template matExpansionPanelContent>
+                        <app-launchpad-list-info [launchpad]="item"></app-launchpad-list-info>
+                    </ng-template>
+                </mat-expansion-panel>
+            }
+        </mat-accordion>
+    }
+</div>
+
+@if (loading$ | async) {
+    <mat-spinner class="c-launchpads__loading-progress"></mat-spinner>
+}

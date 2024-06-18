@@ -1,0 +1,30 @@
+<div class="c-launchpad-list-info">
+    <span class="mat-h2">
+        Details
+    </span>
+    <div class="c-launchpad-list-info__details">
+        {{ launchpad.details }}
+    </div>
+
+    @if (launchpad.launches.length) {
+        <span class="mat-h2">
+            Launches
+        </span>
+
+        <mat-list role="list" class="c-launchpad-list-info__list">
+            @for (launch of launchpad.launches; track launch.id; let last = $last) {
+                <mat-list-item role="listitem">
+                    <div class="c-launchpad-list-info__list-item">
+                        <span>{{ launch.name }}</span>
+                        <span>{{ launch.date_utc | date:'medium' }}</span>
+                    </div>
+                </mat-list-item>
+
+                @if (!last) {
+                    <mat-divider></mat-divider>
+                }
+            }
+        </mat-list>
+    }
+</div>
+

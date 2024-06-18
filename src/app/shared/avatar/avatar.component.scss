@@ -1,0 +1,19 @@
+.c-avatar {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #9feeee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+
+
+    &__image {
+        object-fit: cover;
+    }
+}
+
+.c-avatar img {
+
+}

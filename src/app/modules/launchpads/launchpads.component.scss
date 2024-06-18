@@ -1,0 +1,33 @@
+.c-launchpads {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    width: 880px;
+    margin: 0 auto;
+
+    &__list {
+        display: block;
+        margin-bottom: 24px;
+        width: 100%;
+
+        &-header {
+            min-height: 80px;
+        }
+    }
+
+    &__loading-progress {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.mat-expansion-panel-header {
+    padding-left: 12px;
+}

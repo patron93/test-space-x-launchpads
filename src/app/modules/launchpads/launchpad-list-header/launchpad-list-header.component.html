@@ -1,0 +1,11 @@
+<div class="c-launchpad-list-header">
+    <app-avatar [imageUrl]="launchpad.images.large?.[0]" [altText]="launchpad.name"></app-avatar>
+    <div class="c-launchpad-list-header__name">
+        {{ launchpad.name }}
+    </div>
+
+    <div class="c-launchpad-list-header__location">
+        <mat-icon fontIcon="location_on"></mat-icon>
+        {{ launchpad.locality }}, {{ launchpad.region }}
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.c-launchpad-list-info {
+    padding: 12px 0;
+
+    &__details {
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        max-height: 200px;
+        overflow-y: auto;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
