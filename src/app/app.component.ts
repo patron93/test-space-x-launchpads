@@ -7,7 +7,7 @@ import { LaunchpadsComponent } from './modules/launchpads/launchpads.component';
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, MatToolbar, NgOptimizedImage, LaunchpadsComponent],
+    imports: [RouterOutlet, MatToolbar, NgOptimizedImage],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
