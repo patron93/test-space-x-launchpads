@@ -1,7 +1,12 @@
 ## Demo
 
-
 [Demo site](https://6671dba2c782200008eb57d9--voluble-sorbet-829484.netlify.app/)
+
+## Installation
+
+You must have node.js version no less than ^18.19.1
+
+Run `npm i` for installing all dependencies 
 
 ## Development server
 
