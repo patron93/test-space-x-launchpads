@@ -18,6 +18,10 @@
                 </mat-expansion-panel>
             }
         </mat-accordion>
+    } @else if (!loading$.getValue()) {
+        <div class="c-launchpads__no-data">
+            No data
+        </div>
     }
 </div>
 
